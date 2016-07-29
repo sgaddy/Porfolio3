@@ -1,3 +1,6 @@
+@link-color:       @brand-primary;
+@link-hover-color: darken(@link-color, 25%);
+
 .navbar-brand{
 	background: #4aaaa5;
 	height: 50px;
@@ -26,6 +29,16 @@
     float: right !important;
     margin-right: 105px;
 }
+a{
+	color: @link-color;
+	text-decoration: none;
+
+	&:hover {
+		color: @link-hover-color;
+		text-decoration: blink;
+	}
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -91,12 +104,7 @@ footer {
 	text-align: center;
 	border-top: 5px solid #4aaaa5 ;
 }
-input{
-	margin: 0px;
-	padding: 0px;
-	border: 1px solid #cccccc;
 
-}
 textarea{
 	margin: 0px;
 	width: 505px;
@@ -111,7 +119,7 @@ textarea{
 	text-align: center;
 	color: #ffffff;
 	margin: 10px 0px 0px 0px;
-	padding-bottom: 0px;
+	
 }
 
 .box-set {
@@ -173,57 +181,4 @@ textarea{
   font-size: 16px;
   color: #ffffff;
 }
-
-
-/**
-
-@media only screen and (max-width: 980px) {
-	.container{
-		padding: 0 20px;
-		max-width: 768px;
-	}
-	section .container {
-		padding-top: 130px;
-	}
-	.main-section {
-		max-width: 420px;
-	}
-	
-	
-}
-
-@media only screen and (max-width: 768px) {
-	.main-section,
-	.sidebar {
-		max-width: 100%;
-	}
-	section {
-		overflow: auto;
-	}
-	
-}
-
-@media only screen and (max-width: 640px) {
-	#masthead {
-		position: static;
-		margin-bottom: 20px;
-	}
-	header .container {
-		padding: 0;
-	}
-	section .container {
-		padding-top: 0;
-	}
-	
-	nav {
-		text-align: center;
-		width: 100%;
-		margin: 15px 0;
-	}
-	nav a {
-		width: 30%;
-		padding-left: 0;
-		margin-left: 0;
-	}
-} **/
 
